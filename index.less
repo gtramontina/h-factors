@@ -1,0 +1,202 @@
+/*
+   NOTE: Because this is such a small project, I don't really care compiling
+   this `.less` file on the client.
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Mono:100,400);
+
+// Colors ----------------------------------------------------------------------
+@color_light                      : #FFFFFF;
+@color_mild                       : #87766C;
+@color_dark                       : #45362E;
+@color_shadow                     : fade(@color_dark, 30%);
+@color_warning                    : #EBBD63;
+@color_attention                  : #EB6361;
+
+@color_link-support-factor        : #6C8784;
+@color_control-data-support-factor: #EB6361;
+
+// Fonts -----------------------------------------------------------------------
+@font_sans-serif                  : 'Roboto' sans-serif;
+@font_monospace                   : 'Roboto Mono' monospace;
+@font_base-size                   : 1em;
+
+// Spacing ---------------------------------------------------------------------
+@spacing_default                  : .25em;
+@spacing_large                    : 3 * @spacing_default;
+
+// =============================================================================
+
+html,
+body {
+  height              : 100%;
+}
+
+body {
+  margin              : 0 auto;
+  max-width           : 74em;
+  background-color    : @color_light;
+  color               : @color_dark;
+  font-size           : @font_base-size;
+  font-family         : @font_sans-serif;
+}
+
+header {
+  h1 {
+    margin            : @spacing_large;
+    text-align        : center;
+    font-size         : 2em;
+  }
+
+  & > nav {
+    display           : flex;
+    border-radius     : .2em;
+    background-color  : @color_mild;
+    font-weight       : 100;
+    justify-content   : flex-end;
+
+    a {
+      color           : @color_light;
+      text-decoration : none;
+    }
+
+    li {
+      padding         : @spacing_large;
+      list-style      : none;
+    }
+  }
+}
+
+.formats {
+  display             : flex;
+  margin              : @spacing_large;
+  flex-flow           : row wrap;
+  justify-content     : center;
+}
+
+.format {
+  position            : relative;
+  display             : flex;
+  overflow            : hidden;
+  margin              : @spacing_default;
+  padding             : @spacing_default;
+  width               : 17em;
+  height              : 17em;
+  border              : 1px solid @color_shadow;
+  border-radius       : .2em;
+  background-color    : #fff;
+  box-shadow          : 1px 2px 1px @color_shadow;
+  transition          : transform 150ms;
+  flex-flow           : column;
+
+  &:hover {
+    z-index           : 1;
+    transform         : scale(1.075);
+  }
+
+  &.draft:after {
+    position          : absolute;
+    top               : 2em;
+    right             : 2em;
+    padding           : .5em 4em;
+    background-color  : @color_warning;
+    color             : @color_light;
+    content           : 'Draft';
+    text-align        : center;
+    font-size         : .75em;
+    transform         : translate(50%, -50%) rotate(45deg);
+  }
+
+  &.incomplete:before {
+    position          : absolute;
+    top               : 50%;
+    left              : 50%;
+    z-index           : 1;
+    padding           : .25em 2em;
+    border-radius     : .2em;
+    background-color  : @color_attention;
+    color             : @color_light;
+    content           : 'incomplete';
+    font-size         : .5em;
+    transform         : translate(-50%, -50%) rotate(-4deg);
+  }
+
+  .name {
+    margin            : .25em 0;
+    text-align        : center;
+    font-weight       : 100;
+    font-size         : 1.5em;
+
+    a {
+      display         : block;
+      color           : @color_dark;
+      text-decoration : none;
+    }
+  }
+}
+
+.factors {
+  display             : flex;
+  flex-grow           : 1;
+  flex-flow           : column;
+  justify-content     : center;
+}
+
+.factors-group {
+  display             : flex;
+  margin              : 0;
+  padding             : 0;
+  flex-flow           : row wrap;
+  justify-content     : center;
+}
+
+.factor {
+  margin              : .05em;
+  width               : 2.5em;
+  height              : 2em;
+  color               : @color_light;
+  list-style          : none;
+  text-align          : center;
+  line-height         : 2em;
+  opacity             : .1;
+  cursor              : not-allowed;
+
+  &.present {
+    opacity           : 1;
+    cursor            : pointer;
+  }
+}
+
+.control-data-support {
+  &:before {
+    width             : 100%;
+    content           : '';
+    order             : 1;
+  }
+  .factor {
+    background-color  : @color_control-data-support-factor;
+    &:nth-of-type(n+2) {
+      order           : 1;
+    }
+  }
+}
+
+.link-support {
+    .factor {
+    background-color  : @color_link-support-factor;
+  }
+}
+
+.mime-types {
+  margin              : .25em 0;
+  padding             : 0;
+  text-align          : center;
+  font-weight         : 100;
+  font-size           : .75em;
+  font-family         : @font_monospace;
+}
+
+.mime-type {
+  list-style          : none;
+}
