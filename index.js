@@ -102,7 +102,16 @@ angular.module('h-factors', [])
       name: 'Mason',
       spec: 'https://github.com/JornWildt/Mason',
       mime: ['application/vnd.mason+json'],
-      incomplete: true
+      draft: true,
+      CL: true,
+      CR: true,
+      CU: true,
+      CM: true,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: true,
+      LI: true
     },
 
     {
