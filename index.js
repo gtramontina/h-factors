@@ -67,7 +67,15 @@ angular.module('h-factors', [])
       name: 'HAL',
       spec:'http://stateless.co/hal_specification.html',
       mime: ['application/hal+json', 'application/hal+xml'],
-      incomplete: true
+      CL: true,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: false,
+      LI: false
     },
 
     {
