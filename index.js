@@ -90,7 +90,16 @@ angular.module('h-factors', [])
       name: 'JSON-API',
       spec: 'http://jsonapi.org/',
       mime: ['application/vnd.api+json'],
-      incomplete: true
+      livingStandard: true,      
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: true,
+      LT: false,
+      LN: true,
+      LI: true
     },
 
     {
