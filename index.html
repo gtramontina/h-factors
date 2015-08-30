@@ -23,7 +23,7 @@
   </header>
 
   <main ng:controller="Factors" class="formats">
-    <article ng:repeat="f in formats" ng:class="{'draft': f.draft, 'incomplete': f.incomplete}" class="format">
+    <article ng:repeat="f in formats" ng:class="{'draft': f.draft, 'incomplete': f.incomplete, 'living-standard': f.livingStandard}" class="format">
       <h1 class="name">
         <a ng:href="{{ f.spec }}" title="Specification" target="_blank">{{ f.name }}</a>
       </h1>

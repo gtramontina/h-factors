@@ -14,6 +14,7 @@
 @color_warning                    : #EBBD63;
 @color_attention                  : #EB6361;
 
+@color_living-standard            : #368D01;
 @color_link-support-factor        : #6C8784;
 @color_control-data-support-factor: #EB6361;
 
@@ -35,7 +36,7 @@ body {
 
 body {
   margin              : 0 auto;
-  max-width           : 74em;
+  max-width           : 78em;
   background-color    : @color_light;
   color               : @color_dark;
   font-size           : @font_base-size;
@@ -81,8 +82,8 @@ header {
   overflow            : hidden;
   margin              : @spacing_default;
   padding             : @spacing_default;
-  width               : 17em;
-  height              : 17em;
+  width               : 18em;
+  height              : 18em;
   border              : 1px solid @color_shadow;
   border-radius       : .2em;
   background-color    : #fff;
@@ -97,8 +98,8 @@ header {
 
   &.draft:after {
     position          : absolute;
-    top               : 2em;
-    right             : 2em;
+    top               : 3em;
+    right             : 3em;
     padding           : .5em 4em;
     background-color  : @color_warning;
     color             : @color_light;
@@ -106,6 +107,12 @@ header {
     text-align        : center;
     font-size         : .75em;
     transform         : translate(50%, -50%) rotate(45deg);
+  }
+
+  &.living-standard:after {
+    &:extend(.format.draft:after);
+    background-color  : @color_living-standard;
+    content           : 'Living Standard';
   }
 
   &.incomplete:before {
