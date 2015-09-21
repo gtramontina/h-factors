@@ -132,6 +132,22 @@ angular.module('h-factors', [])
     },
 
     {
+      name: 'Micro API',
+      spec: 'https://github.com/micro-api/micro-api',
+      mime: ['application/vnd.micro+json'],
+      draft: true,
+      CL: true,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: true,
+      LT: false,
+      LN: true,
+      LI: true
+    },
+
+    {
       name: 'OData',
       spec: 'http://www.odata.org/',
       incomplete: true
