@@ -87,7 +87,7 @@ angular.module('h-factors', [])
       CR: false,
       CU: false,
       CM: true,
-      LE: true,
+      LE: false,
       LO: true,
       LT: true,
       LN: true,
@@ -103,7 +103,7 @@ angular.module('h-factors', [])
       CR: false,
       CU: false,
       CM: false,
-      LE: true,
+      LE: false,
       LO: true,
       LT: false,
       LN: true,
@@ -158,6 +158,21 @@ angular.module('h-factors', [])
     },
 
     {
+      name: 'CSS',
+      spec: 'http://www.w3.org/TR/CSS21/',
+      mime: ['text/css'],
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: false,
+      LT: false,
+      LN: false,
+      LI: false
+    },
+
+    {
       name: 'Micro API',
       spec: 'https://github.com/micro-api/micro-api',
       mime: ['application/vnd.micro+json'],
@@ -166,7 +181,7 @@ angular.module('h-factors', [])
       CR: false,
       CU: false,
       CM: false,
-      LE: true,
+      LE: false,
       LO: true,
       LT: false,
       LN: true,
