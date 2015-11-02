@@ -158,21 +158,6 @@ angular.module('h-factors', [])
     },
 
     {
-      name: 'CSS',
-      spec: 'http://www.w3.org/TR/CSS21/',
-      mime: ['text/css'],
-      CL: false,
-      CR: false,
-      CU: false,
-      CM: false,
-      LE: true,
-      LO: false,
-      LT: false,
-      LN: false,
-      LI: false
-    },
-
-    {
       name: 'Micro API',
       spec: 'https://github.com/micro-api/micro-api',
       mime: ['application/vnd.micro+json'],
@@ -201,6 +186,52 @@ angular.module('h-factors', [])
       LT: true,
       LN: true,
       LI: true
+    },
+
+    {
+      name: 'VoiceXML',
+      spec: 'http://www.w3.org/TR/CSS21/',
+      mime: ['application/voicexml+xml'],
+      incomplete: true,
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: false,
+      LT: false,
+      LN: false,
+      LI: false
+    },
+
+    {
+      name: 'CSS',
+      spec: 'http://www.w3.org/TR/CSS21/',
+      mime: ['text/css'],
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: false,
+      LT: false,
+      LN: false,
+      LI: false
+    },
+
+    {
+      name: 'SVG',
+      spec: 'https://github.com/micro-api/micro-api',
+      mime: ['image/svg+xml'],
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: true,
+      LT: false,
+      LN: false,
+      LI: false
     }
   ];
 });
