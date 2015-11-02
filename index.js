@@ -83,14 +83,22 @@ angular.module('h-factors', [])
       spec: 'https://github.com/kevinswiber/siren',
       mime: ['application/vnd.siren+json'],
       draft: true,
-      incomplete: true
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: true,
+      LE: true,
+      LO: true,
+      LT: true,
+      LN: true,
+      LI: false
     },
 
     {
       name: 'JSON-API',
       spec: 'http://jsonapi.org/',
       mime: ['application/vnd.api+json'],
-      livingStandard: true,      
+      livingStandard: true,
       CL: false,
       CR: false,
       CU: false,
@@ -106,13 +114,29 @@ angular.module('h-factors', [])
       name: 'JSON-LD',
       spec: 'http://json-ld.org/',
       mime: ['application/ld+json'],
-      incomplete: true
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: false,
+      LN: false,
+      LI: false
     },
 
     {
       name: 'Hydra',
       spec: 'http://www.markus-lanthaler.com/hydra/',
-      incomplete: true
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: false,
+      LI: false
     },
 
     {
@@ -150,7 +174,15 @@ angular.module('h-factors', [])
     {
       name: 'OData',
       spec: 'http://www.odata.org/',
-      incomplete: true
+      CL: false,
+      CR: true,
+      CU: true,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: true,
+      LI: true
     }
   ];
 });
