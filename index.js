@@ -128,7 +128,9 @@ angular.module('h-factors', [])
     {
       name: 'Hydra',
       spec: 'http://www.markus-lanthaler.com/hydra/',
-      CL: false,
+      mime: ['application/ld+json'],
+      draft: true,
+      CL: true,
       CR: false,
       CU: false,
       CM: false,
@@ -174,6 +176,7 @@ angular.module('h-factors', [])
     {
       name: 'OData',
       spec: 'http://www.odata.org/',
+      mime: ['application/atom+xml','application/atomsvc+xml','application/xml', 'application/json'],
       CL: false,
       CR: true,
       CU: true,
