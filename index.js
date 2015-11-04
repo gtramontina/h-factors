@@ -83,19 +83,27 @@ angular.module('h-factors', [])
       spec: 'https://github.com/kevinswiber/siren',
       mime: ['application/vnd.siren+json'],
       draft: true,
-      incomplete: true
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: true,
+      LE: true,
+      LO: true,
+      LT: true,
+      LN: true,
+      LI: false
     },
 
     {
       name: 'JSON-API',
       spec: 'http://jsonapi.org/',
       mime: ['application/vnd.api+json'],
-      livingStandard: true,      
+      livingStandard: true,
       CL: false,
       CR: false,
       CU: false,
       CM: false,
-      LE: true,
+      LE: false,
       LO: true,
       LT: false,
       LN: true,
@@ -106,13 +114,31 @@ angular.module('h-factors', [])
       name: 'JSON-LD',
       spec: 'http://json-ld.org/',
       mime: ['application/ld+json'],
-      incomplete: true
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: false,
+      LN: false,
+      LI: false
     },
 
     {
       name: 'Hydra',
       spec: 'http://www.markus-lanthaler.com/hydra/',
-      incomplete: true
+      mime: ['application/ld+json'],
+      draft: true,
+      CL: true,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: false,
+      LI: false
     },
 
     {
@@ -140,7 +166,7 @@ angular.module('h-factors', [])
       CR: false,
       CU: false,
       CM: false,
-      LE: true,
+      LE: false,
       LO: true,
       LT: false,
       LN: true,
@@ -150,7 +176,62 @@ angular.module('h-factors', [])
     {
       name: 'OData',
       spec: 'http://www.odata.org/',
-      incomplete: true
+      mime: ['application/atom+xml','application/atomsvc+xml','application/xml', 'application/json'],
+      CL: false,
+      CR: true,
+      CU: true,
+      CM: false,
+      LE: false,
+      LO: true,
+      LT: true,
+      LN: true,
+      LI: true
+    },
+
+    {
+      name: 'VoiceXML',
+      spec: 'http://www.w3.org/TR/CSS21/',
+      mime: ['application/voicexml+xml'],
+      incomplete: true,
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: false,
+      LT: false,
+      LN: false,
+      LI: false
+    },
+
+    {
+      name: 'CSS',
+      spec: 'http://www.w3.org/TR/CSS21/',
+      mime: ['text/css'],
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: false,
+      LT: false,
+      LN: false,
+      LI: false
+    },
+
+    {
+      name: 'SVG',
+      spec: 'https://github.com/micro-api/micro-api',
+      mime: ['image/svg+xml'],
+      CL: false,
+      CR: false,
+      CU: false,
+      CM: false,
+      LE: true,
+      LO: true,
+      LT: false,
+      LN: false,
+      LI: false
     }
   ];
 });
