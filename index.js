@@ -71,7 +71,7 @@ angular.module('h-factors', [])
       CR: false,
       CU: false,
       CM: false,
-      LE: false,
+      LE: true,
       LO: true,
       LT: true,
       LN: false,
