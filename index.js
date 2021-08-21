@@ -83,15 +83,15 @@ angular.module('h-factors', [])
       spec: 'https://github.com/kevinswiber/siren',
       mime: ['application/vnd.siren+json'],
       draft: true,
-      CL: false,
+      CL: true,
       CR: false,
-      CU: false,
+      CU: true,
       CM: true,
       LE: true,
       LO: true,
       LT: true,
       LN: true,
-      LI: false
+      LI: true
     },
 
     {
